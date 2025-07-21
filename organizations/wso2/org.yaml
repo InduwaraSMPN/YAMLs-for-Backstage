@@ -3,30 +3,44 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: guest
+  name: rovin
 spec:
-  memberOf: [guests]
+  memberOf: [integrations-team]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: dinuja
+spec:
+  memberOf: [choreo-integrations-team]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: guests
-spec:
-  type: team
-  children: []
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: wso2-integrations-team
-  title: WSO2 Integrations Team
-  description: WSO2 Integrations Team
+  name: integrations-team
+  title: Integrations Team
+  description: Integrations Team at WSO2
 spec:
   type: team
   profile:
     displayName: WSO2 Integrations Team
     email: integrations-team@wso2.com
-  children: []
-  members: []
+  children: [choreo-integrations-team]
+  members: [rovin]
+  ---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: choreo-integrations-team
+  title: WSO2 Choreo Integrations Team
+  description: Choreo Integrations Team at WSO2
+spec:
+  type: team
+  profile:
+    displayName: WSO2 Choreo Integrations Team
+    email: choreo-integrations-team@wso2.com
+  parent: [integrations-team]
+  members: [dinuja]
