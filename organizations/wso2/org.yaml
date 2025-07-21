@@ -42,5 +42,6 @@ spec:
   profile:
     displayName: WSO2 Choreo Integrations Team
     email: choreo-integrations-team@wso2.com
-  parent: [integrations-team]
+  parent: integrations-team
   members: [dinuja]
+  children: []
