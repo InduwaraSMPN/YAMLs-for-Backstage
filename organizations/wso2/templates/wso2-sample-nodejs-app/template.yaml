@@ -6,7 +6,7 @@ metadata:
   title: WSO2 Sample Node.js App
   description: A template for the scaffolder that creates a simple Node.js service for WSO2
 spec:
-  owner: rovin
+  owner: integrations-team
   type: service
 
   # These parameters are used to generate the input form in the frontend, and are
